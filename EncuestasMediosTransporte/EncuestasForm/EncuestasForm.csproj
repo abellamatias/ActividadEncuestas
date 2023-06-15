@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C34AC50C-A46F-4559-8A80-9A693796875E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>EncuestasCMD</RootNamespace>
-    <AssemblyName>EncuestasCMD</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ProjectGuid>{F87AB3CA-8C34-4A8B-8A2B-983A3922FA35}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EncuestasForm</RootNamespace>
+    <AssemblyName>EncuestasForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -39,23 +39,64 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistroDeEncuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistroDeEncuesta.Designer.cs">
+      <DependentUpon>FormRegistroDeEncuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResultados.Designer.cs">
+      <DependentUpon>FormResultados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistroDeEncuesta.resx">
+      <DependentUpon>FormRegistroDeEncuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="uml\encuesta.uml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="uml\encuesta.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EncuestasLib\EncuestasLib.csproj">
-      <Project>{9D0C78E8-76F2-466D-A288-F6BD6F463AAA}</Project>
+      <Project>{9d0c78e8-76f2-466d-a288-f6bd6f463aaa}</Project>
       <Name>EncuestasLib</Name>
     </ProjectReference>
   </ItemGroup>
